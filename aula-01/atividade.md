@@ -27,12 +27,12 @@ Siga as etapas abaixo para concluir a atividade:
 
 ### 3. Integrar Componentes em `App.js`
 
-- No arquivo `src/App.js`, importe os componentes que você criou e inclua-os na renderização da seguinte maneira:
+- No arquivo `src/App.js`, importe os componentes que você criou e inclua-os na renderização.
 
 ### 4. Executar o Projeto
 
 - De volta ao terminal, certifique-se de estar na pasta raiz do projeto.
-- Execute o seguinte comando para iniciar o servidor de desenvolvimento:
+- Execute o seguinte comando para iniciar o servidor de desenvolvimento: `yarn start` ou `npm run start`
 
 O projeto React será iniciado e você poderá visualizá-lo em seu navegador.
 
