@@ -24,10 +24,12 @@ function List() {
   }, []);
 
   useEffect(() => {
-    if (loading) {
-      console.log("esta carregando");
-    }
-  }, [loading]);
+    console.log("Montou");
+
+    return () => {
+      console.log("Desmontado");
+    };
+  }, []);
 
   if (loading) {
     return <small>loading..</small>;

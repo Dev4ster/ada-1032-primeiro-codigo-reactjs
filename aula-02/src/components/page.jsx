@@ -34,9 +34,7 @@ class Page extends Component {
     // console.log("componentDidMount");
   }
 
-  componentDidUpdate() {
-    console.log("componentDidUpdate");
-  }
+  componentDidUpdate() {}
 
   render() {
     return (
