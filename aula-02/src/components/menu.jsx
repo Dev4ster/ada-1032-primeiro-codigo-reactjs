@@ -1,6 +1,8 @@
 import Proptypes from "prop-types";
+import { useCart } from "../cartContext";
 
 function Menu({ subtitle, tipo, items: links, date }) {
+  const { addProduct } = useCart();
   return (
     <>
       <p>
@@ -13,6 +15,18 @@ function Menu({ subtitle, tipo, items: links, date }) {
             {link.label}
           </a>
         ))}
+
+        <a
+          onClick={(e) => {
+            e.preventDefault();
+            addProduct({
+              id: new Date().getTime(),
+              price: Math.random() * 100,
+            });
+          }}
+        >
+          AddPorduct
+        </a>
       </nav>
     </>
   );

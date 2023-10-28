@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
-import { useEffect } from "react";
-function Header({ count, changeCount }) {
+import { useCart } from "../cartContext";
+function Header({ count, changeCount, children }) {
+  const { products } = useCart();
+
   // useEffect(() => {
   //   console.log("Header");
   // }, []);
@@ -15,6 +17,8 @@ function Header({ count, changeCount }) {
   // }, [changeCount]);
   return (
     <header>
+      <h1>Products count: {products.length}</h1>
+      {children}
       <h1>{count}</h1>
       <button onClick={changeCount}>increment</button>
     </header>

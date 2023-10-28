@@ -13,6 +13,8 @@ import Menu from "./components/menu";
 import Page from "./components/page";
 import List from "./components/list";
 import Todo from "./components/todo";
+import { CartContextProvider } from "./cartContext";
+import HeaderCart from "./components/headerCart";
 
 const loginReducer = (state, action) => {
   switch (action.type) {
@@ -81,28 +83,31 @@ function App() {
   // }, [busca]);
 
   return (
-    <div className="app">
-      <Header count={count} changeCount={handleIncrementCount} />
-      <Menu
-        subtitle="oi subtitle"
-        dado={{
-          numeroQualquer: 10,
-        }}
-        items={[
-          {
-            label: "Home",
-            link: "/home",
-          },
-          {
-            label: "Produtos",
-            link: "/produtos",
-          },
-        ]}
-        date={new Date()}
-      />
-      <Page title="oi" count={count} changeCount={handleIncrementCount}>
-        {/* {count < 5 ? <List /> : <></>} */}
-        {/* <input
+    <CartContextProvider>
+      <div className="app">
+        <Header count={count} changeCount={handleIncrementCount}>
+          <HeaderCart />
+        </Header>
+        <Menu
+          subtitle="oi subtitle"
+          dado={{
+            numeroQualquer: 10,
+          }}
+          items={[
+            {
+              label: "Home",
+              link: "/home",
+            },
+            {
+              label: "Produtos",
+              link: "/produtos",
+            },
+          ]}
+          date={new Date()}
+        />
+        <Page title="oi" count={count} changeCount={handleIncrementCount}>
+          {/* {count < 5 ? <List /> : <></>} */}
+          {/* <input
           ref={inputRef}
           type="text"
           value={busca}
@@ -112,10 +117,11 @@ function App() {
         {authState.user ? <h1>{authState.user.name}</h1> : <h1>Sem usuário</h1>}
         <button onClick={login}>Login</button>
         <button onClick={logout}>Logout</button> */}
-        <Todo />
-      </Page>
-      <Footer />
-    </div>
+          <Todo />
+        </Page>
+        <Footer />
+      </div>
+    </CartContextProvider>
   );
 }
 
