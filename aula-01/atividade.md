@@ -27,7 +27,7 @@ Siga as etapas abaixo para concluir a atividade:
 
 ### 3. Integrar Componentes em `App.js`
 
-- No arquivo `src/App.js`, importe os componentes que você criou e inclua-os na renderização.
+- No arquivo `src/App.jsx`, importe os componentes que você criou e inclua-os na renderização.
 
 ### 4. Executar o Projeto
 

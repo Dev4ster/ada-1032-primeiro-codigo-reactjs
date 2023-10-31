@@ -5,7 +5,7 @@ import { signOutService } from "../services/auth";
 
 function AuthContainer() {
   const { user, status } = useAuth();
-  const navigate = useNavigate("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!user && ["FAILED", "LOADED"].includes(status)) {
