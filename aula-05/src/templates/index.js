@@ -1,0 +1,1 @@
+export { CommonPageTemplate } from "./commomPage";
