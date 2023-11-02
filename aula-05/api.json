@@ -1,0 +1,19 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Mouses",
+      "slug": "/categoria/mouses"
+    },
+    {
+      "id": 2,
+      "name": "Teclados",
+      "slug": "/categoria/teclados"
+    },
+    {
+      "id": 3,
+      "name": "Monitores",
+      "slug": "/categoria/monitores"
+    }
+  ]
+}

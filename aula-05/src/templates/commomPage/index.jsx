@@ -1,4 +1,5 @@
-import { Footer, Header, Menu } from "../../components";
+import MenuContainer from "src/containers/menuContainer";
+import { Footer, Header } from "src/components";
 import * as Styled from "./styles";
 
 import PropTypes from "prop-types";
@@ -9,7 +10,7 @@ export function CommonPageTemplate({ children }) {
       <Header />
       <Styled.ContentContainer>
         <aside>
-          <Menu />
+          <MenuContainer />
         </aside>
         <main>{children}</main>
       </Styled.ContentContainer>
