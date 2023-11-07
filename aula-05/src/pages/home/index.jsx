@@ -1,10 +1,17 @@
+import SliderContainer from "src/containers/sliderContainer";
 import { CommonPageTemplate } from "../../templates";
+import FeaturedProductsContainer from "src/containers/featuredProductsContainer";
+import { PaddingWrapper } from "src/components";
 
 export function HomePage() {
   return (
     <CommonPageTemplate>
-      <h2>Home</h2>
-      <h2>Home</h2>
+      {/* <SliderContainer /> */}
+      <PaddingWrapper>
+        <h2>Produtos em destaque</h2>
+        <br />
+        <FeaturedProductsContainer />
+      </PaddingWrapper>
     </CommonPageTemplate>
   );
 }

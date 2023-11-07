@@ -7,7 +7,7 @@ export const MenuContext = createContext({
 });
 
 // eslint-disable-next-line react/prop-types
-export const MenuContextPovider = ({ children }) => {
+export const MenuContextProvider = ({ children }) => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {

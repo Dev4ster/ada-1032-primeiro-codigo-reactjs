@@ -3,11 +3,13 @@ import { Footer, Header } from "src/components";
 import * as Styled from "./styles";
 
 import PropTypes from "prop-types";
+import { useCart } from "src/context/cartContext";
 
 export function CommonPageTemplate({ children }) {
+  const cart = useCart();
   return (
     <Styled.Container>
-      <Header />
+      <Header cart={cart} />
       <Styled.ContentContainer>
         <aside>
           <MenuContainer />

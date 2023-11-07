@@ -2,16 +2,20 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./styles/global";
 import { theme } from "./styles/theme";
 import AppRouter from "./routes/router";
-import { MenuContextPovider } from "./context/menuContext";
+import { MenuContextProvider } from "./context/menuContext";
+import "react-slideshow-image/dist/styles.css";
+import { CartContextProvider } from "./context/cartContext";
 
 function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <GlobalStyles red={true} height={100} padding={10} />
-        <MenuContextPovider>
-          <AppRouter />
-        </MenuContextPovider>
+        <GlobalStyles />
+        <MenuContextProvider>
+          <CartContextProvider>
+            <AppRouter />
+          </CartContextProvider>
+        </MenuContextProvider>
       </ThemeProvider>
     </>
   );

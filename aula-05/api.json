@@ -15,5 +15,77 @@
       "name": "Monitores",
       "slug": "/categoria/monitores"
     }
+  ],
+  "banners": [
+    {
+      "id": 1,
+      "image": "https://miro.medium.com/v2/resize:fit:1400/1*664BJ-TGbLYEgrpxy2_g1A.jpeg",
+      "url": "http://twitter.com"
+    },
+    {
+      "id": 2,
+      "image": "https://miro.medium.com/v2/resize:fit:1400/1*664BJ-TGbLYEgrpxy2_g1A.jpeg",
+      "url": "http://google.com"
+    }
+  ],
+  "featuredProducts": [
+    {
+      "id": 1,
+      "product": "teste 1",
+      "amount": 15.433234,
+      "image": "https://help.rangeme.com/hc/article_attachments/360006928633/what_makes_a_good_product_image.jpg",
+      "category": 1
+    },
+    {
+      "id": 2,
+      "product": "teset 2",
+      "amount": 50.5022123,
+      "image": "https://help.rangeme.com/hc/article_attachments/360006928633/what_makes_a_good_product_image.jpg",
+      "category": 2
+    },
+    {
+      "id": 3,
+      "product": "teset 3",
+      "amount": 50.5022123,
+      "image": "https://help.rangeme.com/hc/article_attachments/360006928633/what_makes_a_good_product_image.jpg",
+      "category": 3
+    },
+    {
+      "id": 4,
+      "product": "teset 4",
+      "amount": 50.5022123,
+      "image": "https://help.rangeme.com/hc/article_attachments/360006928633/what_makes_a_good_product_image.jpg",
+      "category": 3
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "product": "teste 1",
+      "amount": 15.433234,
+      "image": "https://help.rangeme.com/hc/article_attachments/360006928633/what_makes_a_good_product_image.jpg",
+      "category": 1
+    },
+    {
+      "id": 2,
+      "product": "teset 2",
+      "amount": 50.5022123,
+      "image": "https://help.rangeme.com/hc/article_attachments/360006928633/what_makes_a_good_product_image.jpg",
+      "category": 2
+    },
+    {
+      "id": 3,
+      "product": "teset 3",
+      "amount": 50.5022123,
+      "image": "https://help.rangeme.com/hc/article_attachments/360006928633/what_makes_a_good_product_image.jpg",
+      "category": 3
+    },
+    {
+      "id": 4,
+      "product": "teset 4",
+      "amount": 50.5022123,
+      "image": "https://help.rangeme.com/hc/article_attachments/360006928633/what_makes_a_good_product_image.jpg",
+      "category": 3
+    }
   ]
 }

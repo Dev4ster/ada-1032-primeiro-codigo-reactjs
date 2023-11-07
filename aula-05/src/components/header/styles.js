@@ -12,6 +12,10 @@ export const Container = styled.header`
         h1 {
             color: ${theme.colors.primary}}
         }
+
+        div {
+            color: #333;
+        }
               
     `}
 `;

@@ -16,7 +16,9 @@ export const ContentContainer = styled.div`
 
     main {
       flex: 3;
-      background-color: yellow;
+      background-color: ${theme.colors.white};
+      color: ${theme.colors.black};
+      width: 100%;
     }
   `};
 `;
