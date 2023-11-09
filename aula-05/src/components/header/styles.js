@@ -9,12 +9,16 @@ export const Container = styled.header`
         display: flex;
         align-items: center;
         padding: ${theme.spacings.small};
+        justify-content: space-between;
         h1 {
             color: ${theme.colors.primary}}
         }
 
         div {
             color: #333;
+            small {
+                font-weight: ${theme.font.bold};
+            }
         }
               
     `}

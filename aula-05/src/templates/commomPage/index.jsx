@@ -4,12 +4,18 @@ import * as Styled from "./styles";
 
 import PropTypes from "prop-types";
 import { useCart } from "src/context/cartContext";
+import { useNavigate } from "react-router-dom";
 
 export function CommonPageTemplate({ children }) {
   const cart = useCart();
+  const navigate = useNavigate();
+
+  const handleGoToCart = () => {
+    navigate("/carrinho");
+  };
   return (
     <Styled.Container>
-      <Header cart={cart} />
+      <Header cart={cart} onNavigateToCart={handleGoToCart} />
       <Styled.ContentContainer>
         <aside>
           <MenuContainer />

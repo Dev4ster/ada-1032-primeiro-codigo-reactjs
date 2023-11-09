@@ -1,4 +1,5 @@
 import ProductCard from "src/components/productCard";
+import { useCart } from "src/context/cartContext";
 import useFeaturedProducts from "src/hooks/useFeaturedProducts";
 import { useProductCategory } from "src/hooks/useProductCategory";
 import { toReais } from "src/utils/toReais";
@@ -13,6 +14,12 @@ const Container = styled.div`
 function FeaturedProductsContainer() {
   const { data } = useFeaturedProducts();
   const { getCategoryById } = useProductCategory();
+  const { addProduct } = useCart();
+
+  const handleAddProduct = (product) => {
+    addProduct(product);
+  };
+
   return (
     <Container>
       {data.map((product) => (
@@ -22,6 +29,7 @@ function FeaturedProductsContainer() {
           category={getCategoryById(product.category)}
           image={product.image}
           product={product.product}
+          onAddToCart={() => handleAddProduct(product)}
         />
       ))}
     </Container>

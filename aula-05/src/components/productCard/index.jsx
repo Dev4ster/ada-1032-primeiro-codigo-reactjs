@@ -1,7 +1,14 @@
 /* eslint-disable react/prop-types */
 import * as S from "./styles";
 
-function ProductCard({ product, amount, image, category, onAddToCart }) {
+function ProductCard({
+  product,
+  amount,
+  image,
+  category,
+  onAddToCart,
+  onViewDetails,
+}) {
   return (
     <S.Container>
       <S.ProductImage src={image} />
@@ -12,7 +19,9 @@ function ProductCard({ product, amount, image, category, onAddToCart }) {
           <small>{category?.name}</small>
         </div>
         <div>
-          <S.ProductDetailsButton>Detalhes</S.ProductDetailsButton>
+          <S.ProductDetailsButton onClick={onViewDetails}>
+            Detalhes
+          </S.ProductDetailsButton>
           <S.ProductAddToCardButton onClick={onAddToCart}>
             Adicionar ao carrinho
           </S.ProductAddToCardButton>

@@ -1,5 +1,5 @@
-import { useParams } from "react-router-dom";
-import { ProductCard } from "src/components";
+import { useNavigate, useParams } from "react-router-dom";
+import { AppHelmet, ProductCard } from "src/components";
 import { useCart } from "src/context/cartContext";
 import { useProductCategory } from "src/hooks/useProductCategory";
 import useProductsByCategory from "src/hooks/useProductsByCategory";
@@ -18,11 +18,22 @@ function ProductsByCategoryContainer() {
   const { getCategoryById } = useProductCategory();
   const { addProduct } = useCart();
 
+  const navigate = useNavigate();
   const handleAddProduct = (product) => {
     addProduct(product);
   };
+
+  const handleNavigate = (product) => {
+    navigate(`/produto/${product.product}/${product.id}`);
+  };
   return (
     <Container>
+      <AppHelmet
+        title={`Categoria - ${
+          category_name[0].toUpperCase() + category_name.slice(1)
+        }`}
+      />
+
       {data.map((product) => (
         <ProductCard
           key={product.id}
@@ -31,6 +42,7 @@ function ProductsByCategoryContainer() {
           image={product.image}
           product={product.product}
           onAddToCart={() => handleAddProduct(product)}
+          onViewDetails={() => handleNavigate(product)}
         />
       ))}
     </Container>
