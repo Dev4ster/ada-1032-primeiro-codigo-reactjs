@@ -8,12 +8,16 @@ function CartProductsContainer() {
     (id) => products.find((p2) => p2.id === id)
   );
 
-  const quantosTem = (id) => {
+  const countProductById = (id) => {
     return products.filter((product) => product.id === id)?.length ?? 0;
   };
 
   return uniqueProducts.map((product) => (
-    <CartProduct key={product.id} {...product} count={quantosTem(product.id)} />
+    <CartProduct
+      key={product.id}
+      {...product}
+      count={countProductById(product.id)}
+    />
   ));
 }
 
